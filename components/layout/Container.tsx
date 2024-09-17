@@ -8,7 +8,7 @@ type Props = {
 const Container:React.FC<Props> = ({children}) => {
   return (
     <SafeAreaView>
-                <ScrollView contentContainerStyle={{
+                <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={{
         padding: Spacing.padding.base,
                   paddingBottom:Spacing.padding.xxl
           }}>

@@ -174,9 +174,12 @@ const HomeScreen: React.FC = () => {
                     }}>
                         Mobile Games
                     </Text>
-                    <ScrollView style={{
-                        marginVertical: Spacing.margin.base
-                    }}  horizontal>
+                    <ScrollView
+                        showsHorizontalScrollIndicator={false}
+                        style={{
+                            marginVertical: Spacing.margin.base
+                        }}
+                        horizontal>
                         {games.map(game => <TouchableOpacity
                             style={{
                                marginRight:Spacing.margin.base
