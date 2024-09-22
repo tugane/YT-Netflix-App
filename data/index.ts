@@ -309,16 +309,30 @@ export const mightLike = movies.slice(0, 7)
 export const popular = movies.slice(5, 11)
 export const mainCover = movies[6]
 
-export type ComingSoon = {
+export type NewAndHotMovieItem = {
     id: number,
     title: string,
     image: ImageRequireSource,
-    comingOn: {
+    comingOn?: {
         month: string,
         day: number,
     },
     description: string,
-    categories: Category[]
+    categories: Category[],
+    age: number
+}
+
+export type ComingSoon = {
+    id: number,
+    title: string,
+    image: ImageRequireSource,
+    comingOn?: {
+        month: string,
+        day: number,
+    },
+    description: string,
+    categories: Category[],
+    age: number
 }
 
 export const comingSoon: ComingSoon[] = [
@@ -331,6 +345,7 @@ export const comingSoon: ComingSoon[] = [
             month: "Jun",
             day: 21
         },
+        age: 18,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
     },
     {
@@ -342,6 +357,7 @@ export const comingSoon: ComingSoon[] = [
             month: "Aug",
             day: 17
         },
+        age: 18,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
     },
     {
@@ -353,6 +369,7 @@ export const comingSoon: ComingSoon[] = [
             month: "Feb",
             day: 29
         },
+        age: 18,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
     },
     {
@@ -364,6 +381,7 @@ export const comingSoon: ComingSoon[] = [
             month: "Sep",
             day: 10
         },
+        age: 18,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
     },
     {
@@ -375,6 +393,7 @@ export const comingSoon: ComingSoon[] = [
             month: "Aug",
             day: 21
         },
+        age: 18,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
     },
     {
@@ -386,6 +405,7 @@ export const comingSoon: ComingSoon[] = [
             month: "Aug",
             day: 21
         },
+        age: 18,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
     },
     {
@@ -397,6 +417,85 @@ export const comingSoon: ComingSoon[] = [
             month: "Aug",
             day: 21
         },
+        age: 18,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
     }
+]
+
+export type EveryoneWatching = {
+    id: number,
+    title: string,
+    image: ImageRequireSource,
+    comingOn?: {
+        month: string,
+        day: number,
+    },
+    description: string,
+    categories: Category[],
+    age: number
+}
+
+export const everyoneWatching: EveryoneWatching[] = [
+     {
+        id: 4,
+        title: "Luckiest girl alive",
+        image: require('../assets/images/movies/coming/Lukiest girl alive.jpg'),
+        categories: categories.slice(0, 3),
+
+        age: 18,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
+    },
+    {
+        id: 5,
+        title: "Sister death",
+        image: require('../assets/images/movies/coming/Sister death.jpg'),
+        categories: categories.slice(0, 3),
+
+        age: 18,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
+    },
+    {
+        id: 6,
+        title: "Spenser confidential",
+        image: require('../assets/images/movies/coming/Spenser confidential.jpg'),
+        categories: categories.slice(0, 3),
+        age: 18,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
+    },
+    {
+        id: 7,
+        title: "Supacell",
+        image: require('../assets/images/movies/coming/Supacell.jpg'),
+        categories: categories.slice(0, 3),
+        age: 18,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
+    },
+    {
+        id: 1,
+        title: "Fair Play",
+        image: require('../assets/images/movies/coming/Fair Play.jpg'),
+        categories: categories.slice(0, 3),
+
+        age: 18,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
+    },
+    {
+        id: 2,
+        title: "Love, Guaranteed",
+        image: require('../assets/images/movies/coming/love, guaranteed.jpg'),
+        categories: categories.slice(0, 3),
+
+        age: 18,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
+    },
+    {
+        id: 3,
+        title: "From scratch",
+        image: require('../assets/images/movies/coming/From scratch.jpg'),
+        categories: categories.slice(0, 3),
+
+        age: 18,
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ante massa, hendrerit a massa vitae, sagittis facilisis est.",
+    },
+   
 ]

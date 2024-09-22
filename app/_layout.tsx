@@ -24,7 +24,7 @@ export default function RootLayout() {
     if (!loaded) return null;
     return (
         <ThemeProvider value={theme}>
-            <StatusBar barStyle="light-content"/>
+            <StatusBar barStyle={"light-content"} />
             <Stack>
                 <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
                 <Stack.Screen name="+not-found"/>
