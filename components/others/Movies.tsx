@@ -4,6 +4,7 @@ import Font from '@/constants/Font'
 import FontSize from '@/constants/FontSize'
 import Spacing from '@/constants/Spacing'
 import { Movie} from '@/data'
+import { router } from 'expo-router'
 import React from 'react'
 import { ScrollView, Text, TouchableOpacity, View,Image } from 'react-native'
 
@@ -27,7 +28,13 @@ const Movies:React.FC<Props> = ({title, movies}) => {
         <ScrollView style={{
             marginTop: Spacing.margin.base
         }} horizontal showsHorizontalScrollIndicator={false} >
-            {movies.map(movie => <TouchableOpacity
+              {movies.map(movie => <TouchableOpacity
+                  onPress={() => router.push({
+                      pathname: "/details",
+                      params: {
+                          movieId: movie.id
+                      }
+                })}
             key={movie.id}
                 style={{
                 marginRight: Spacing.margin.base

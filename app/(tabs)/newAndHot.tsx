@@ -304,6 +304,7 @@ const NewAndHot: React.FC = () => {
                                             }}
                                             horizontal showsHorizontalScrollIndicator={false}>
                                             {movie.categories.map((category, index) => <View
+                                                key={category.id}
                                                 style={{
                                                     flexDirection: "row",
                                                     alignItems: "center",

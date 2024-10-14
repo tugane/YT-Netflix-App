@@ -13,6 +13,7 @@ import FontSize from '@/constants/FontSize'
 import Font from '@/constants/Font'
 import { ITEM_SIZE } from '@/constants'
 import Movies from '@/components/others/Movies'
+import { router } from 'expo-router'
 
 
 const HomeScreen: React.FC = () => {
@@ -72,7 +73,14 @@ const HomeScreen: React.FC = () => {
             <Container>
                 <Header title="For Others" />
                 <CategoryFilter onFilter={handleFilter} />
-                <TouchableOpacity style={{
+                <TouchableOpacity
+                    onPress={() => router.push({
+                        pathname: "/details",
+                        params: {
+                            movieId: mainCover.id
+                        }
+                    })}
+                    style={{
                     height: MAIN_IMAGE_HEIGHT,
                     width: "95%",
                     alignSelf: "center",
